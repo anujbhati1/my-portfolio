@@ -1,17 +1,17 @@
-'use client';
-import { cn } from '@/lib/cn';
-import { navbarData } from '@/lib/constants';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import React, { useState } from 'react';
+"use client";
+import { cn } from "@/lib/cn";
+import { navbarData } from "@/lib/constants";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import React, { useState } from "react";
 
 function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
   const pathname = usePathname();
-  console.log('This is parhname', pathname);
+  console.log("This is parhname", pathname);
 
   return (
-    <nav className="bg-black1 border-gray-200 mx-2 md:mx-20 my-4 rounded-lg">
+    <nav className="bg-black1 border-gray-200 mx-2 my-4 rounded-lg">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1 md:p-4">
         <Link
           href="/"
@@ -68,21 +68,21 @@ function Header() {
           </svg>
         </button>
         <div
-          className={cn('w-full md:block md:w-auto', {
+          className={cn("w-full md:block md:w-auto", {
             hidden: !showMobileMenu,
           })}
           id="navbar-default"
         >
-          <ul className="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
+          <ul className="flex flex-col p-4 md:p-0 mt-4 border border-primary/10 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
             {navbarData.map((item) => (
               <li>
                 <a
                   key={item.path}
                   href="#"
                   className={cn(
-                    'block py-2 px-3 text-white/50 rounded hover:text-primary/50 md:hover:bg-transparent md:border-0 md:hover:text-primary/50 md:p-0',
+                    "block py-2 px-3 text-white/50 rounded hover:text-primary/50 md:hover:bg-transparent md:border-0 md:hover:text-primary/50 md:p-0",
                     {
-                      'text-white bg-primary/50 hover:text-white md:text-primary/50 md:bg-transparent':
+                      "text-white bg-primary/50 hover:text-white md:text-primary/50 md:bg-transparent":
                         item.path === pathname,
                     }
                   )}
