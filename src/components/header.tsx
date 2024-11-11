@@ -8,7 +8,6 @@ import React, { useState } from "react";
 function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
   const pathname = usePathname();
-  console.log("This is parhname", pathname);
 
   return (
     <nav className="bg-black1 border-gray-200 mx-2 my-4 rounded-lg">
@@ -75,7 +74,7 @@ function Header() {
         >
           <ul className="flex flex-col p-4 md:p-0 mt-4 border border-primary/10 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
             {navbarData.map((item) => (
-              <li>
+              <li key={item.path}>
                 <a
                   key={item.path}
                   href="#"

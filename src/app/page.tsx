@@ -1,3 +1,5 @@
+import BackToTop from "@/components/backToTop";
+import ContactMe from "@/components/contactMe";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
@@ -14,7 +16,7 @@ export default function Home() {
         <div>
           <div className="mb-8 mx-4">
             <div className="text-[#7b4ae2] w-fit bg-[#7b4ae2]/10 text-sm font-bold px-2 py-1 rounded-lg mx-1">
-              🔗 Portfólio
+              🔗 Portfolio
             </div>
             <h1 className="text-2xl md:text-4xl font-bold text-white mt-3">
               Works and projects
@@ -62,7 +64,7 @@ export default function Home() {
                   </div>
                 </div> */}
                 <h1 className="text-2xl md:text-4xl font-bold text-center text-white mt-3">
-                  Other Extra Softwear and skills
+                  Additional Tools and Expertise
                 </h1>
               </div>
             </div>
@@ -74,6 +76,22 @@ export default function Home() {
               ))}
             </div>
           </div>
+          <div className="mb-20 mt-10">
+            <div className="flex justify-center items-center mb-12">
+              <div className="mx-4">
+                <div className="flex justify-center">
+                  <div className="text-[#7b4ae2] w-fit text-center bg-[#7b4ae2]/10 text-sm font-bold px-2 py-1 rounded-lg mx-1">
+                    📬 Contacts
+                  </div>
+                </div>
+                <h1 className="text-2xl md:text-4xl font-bold text-center text-white mt-3">
+                  Let&apos;s Talk!
+                </h1>
+              </div>
+            </div>
+            <ContactMe />
+          </div>
+          <BackToTop />
         </div>
       </div>
       <Footer />
