@@ -78,24 +78,26 @@ function ContactMe() {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row gap-7 items-center justify-center">
-      <button
-        onClick={contactMeOnWhatsapp}
-        className="text-[#7b4ae2] flex items-center justify-center gap-3 border-[0.5px] border-[#7b4ae2] px-4 py-2 rounded-xl"
-      >
-        <PiWhatsappLogoThin size={30} color="#7b4ae2" />
-        <p className="text-xl font-semibold">Let&apos;s talk!</p>
-      </button>
-      <div className="text-[#7b4ae2] flex flex-col items-center space-y-2">
-        <BsSend size={20} color="#7b4ae2" />
+    <div className='flex flex-col sm:flex-row gap-7 items-center justify-center'>
+      <div>
+        <button
+          onClick={contactMeOnWhatsapp}
+          className='text-[#7b4ae2] flex items-center justify-center gap-3 border-[0.5px] border-[#7b4ae2] px-4 py-2 rounded-xl'
+        >
+          <PiWhatsappLogoThin size={30} color='#7b4ae2' />
+          <p className='text-xl font-semibold'>Let&apos;s talk!</p>
+        </button>
+      </div>
+      <div className='text-[#7b4ae2] flex flex-col items-center space-y-2'>
+        <BsSend size={20} color='#7b4ae2' />
         <div>E-mail:</div>
-        <div className="text-white/50">anujbhati7488@gmail.com</div>
+        <div className='text-white/50'>anujbhati7488@gmail.com</div>
         <button onClick={handleCopyEmail}>
-          <PiCopySimpleLight size={20} color="#7b4ae2" />
+          <PiCopySimpleLight size={20} color='#7b4ae2' />
         </button>
         <div>
           {copyStatus.message ? (
-            <p className="text-xs font-normal">{copyStatus.message}</p>
+            <p className='text-xs font-normal'>{copyStatus.message}</p>
           ) : null}
         </div>
       </div>

@@ -3,34 +3,36 @@ import TitleInfo from "./titleinfo";
 
 function Hero() {
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center md:justify-center">
-        <div className="lg:max-w-md lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 flex justify-center">
+    <section className='text-gray-600 body-font'>
+      <div className='container mx-auto flex px-5 py-24 md:flex-row flex-col items-center md:justify-center'>
+        <div className='lg:max-w-md lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 flex justify-center'>
           <img
-            className="object-cover object-center rounded-full"
-            alt="hero"
-            src="/profile.jpeg"
+            className='object-cover object-center rounded-full'
+            alt='hero'
+            src='/profile.jpeg'
             // src="https://dummyimage.com/300x300"
           />
         </div>
-        <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-          <TitleInfo name="About Me" icon="🧐" />
-          <h1 className="title-font sm:text-4xl text-3xl mt-2 mb-4 font-medium text-white">
-            I&apos;m Anuj Bhati, a <br className="hidden lg:inline-block" />
+        <div className='lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center'>
+          <TitleInfo name='About Me' icon='🧐' />
+          <h1 className='title-font sm:text-4xl text-3xl mt-2 mb-4 font-medium text-white'>
+            I&apos;m Anuj Bhati, a <br className='hidden lg:inline-block' />
             Full-Stack Developer
           </h1>
-          <p className="mb-8 leading-relaxed">
-            Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
-            plant cold-pressed tacos poke beard tote bag. Heirloom echo park
-            mlkshk tote bag selvage hot chicken authentic tumeric truffaut
-            hexagon try-hard chambray.
+          <p className='mb-8 leading-relaxed'>
+            Experienced Full Stack developer with a track record of delivering
+            high-quality mobile and web applications. Skilled in implementing
+            best practices for efficient and scalable code. Passionate about
+            pushing boundaries in mobile app and web development to drive
+            business success.
           </p>
           <div>
-            <p className="text-white mb-2">Education</p>
-            <p className="mb-8 leading-relaxed">
-              Copper mug try-hard pitchfork pour-over freegan heirloom neutra
-              air plant cold-pressed tacos poke beard tote bag. Heirloom echo
-              park mlkshk tote bag selvage.
+            <p className='text-white mb-2'>Education</p>
+            <p className='mb-8 leading-relaxed'>
+              I completed my undergraduate degree and later pursued a Master's
+              in Computer Applications. Along the way, I discovered my passion
+              for coding and have been dedicated to enhancing my skills in the
+              field ever since.
             </p>
           </div>
         </div>
