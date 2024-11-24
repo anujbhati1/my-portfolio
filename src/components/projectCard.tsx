@@ -8,6 +8,7 @@ function ProjectCard({
   title,
   image,
   tech,
+  tech2,
   status,
   type,
 }: {
@@ -16,6 +17,7 @@ function ProjectCard({
   image: string;
   url: string;
   tech: string;
+  tech2?: string;
   status: string;
   type: string;
 }) {
@@ -33,6 +35,11 @@ function ProjectCard({
             <button className='text-[#7b4ae2] bg-[#7b4ae2]/10 text-sm font-bold px-2 py-1 rounded-lg mx-1'>
               {tech}
             </button>
+            {tech2 ? (
+              <button className='text-[#7b4ae2] bg-[#7b4ae2]/10 text-sm font-bold px-2 py-1 rounded-lg mx-1'>
+                {tech2}
+              </button>
+            ) : null}
           </div>
           <div className='bg-[#4751b3] rounded-lg my-3 h-52 flex items-center'>
             <Image

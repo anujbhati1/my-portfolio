@@ -53,6 +53,7 @@ export default function Home() {
                   url={item.url}
                   status={item.status}
                   tech={item.tech}
+                  tech2={item.tech2}
                   title={item.title}
                   image={item.image}
                   type={item.type}
@@ -79,7 +80,7 @@ export default function Home() {
                   key={item.id}
                   des={item.des}
                   name={item.name}
-                  icon={item.icon}
+                  Icon={item.icon}
                 />
               ))}
             </div>

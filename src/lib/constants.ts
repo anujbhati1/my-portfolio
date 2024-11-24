@@ -10,11 +10,12 @@ import {
   FaHtml5,
   FaJs,
   FaNode,
+  FaNodeJs,
   FaReact,
 } from "react-icons/fa";
 import { IoLogoFigma } from "react-icons/io5";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiExpress, SiGradle, SiNextdotjs } from "react-icons/si";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { SiExpress, SiGradle, SiNextdotjs, SiPostgresql } from "react-icons/si";
 
 export const navbarData: NavbarTypes[] = [
   {
@@ -47,6 +48,7 @@ export const projects = [
     url: "https://play.google.com/store/apps/details?id=com.digilegalpro&hl=en",
     type: "mobile",
     tech: "React Native",
+    tech2: "",
     status: "Online",
     des: [
       {
@@ -104,6 +106,7 @@ export const projects = [
     url: "https://play.google.com/store/apps/details?id=com.legitquest&hl=en",
     type: "mobile",
     tech: "React Native",
+    tech2: "",
     status: "Online",
     des: [
       {
@@ -181,6 +184,7 @@ export const projects = [
     url: "https://digilegalbooks.com/",
     type: "web",
     tech: "Next JS",
+    tech2: "",
     status: "Online",
     des: [
       {
@@ -242,6 +246,7 @@ export const projects = [
     url: "https://digireader.co.in/",
     type: "web",
     tech: "Next JS",
+    tech2: "",
     status: "Online",
     des: [
       {
@@ -303,6 +308,7 @@ export const projects = [
     url: "https://praic.in/",
     type: "web",
     tech: "Next JS",
+    tech2: "",
     status: "Online",
     des: [
       {
@@ -360,6 +366,7 @@ export const projects = [
     url: "https://web.architectengineer.in/",
     type: "web",
     tech: "Next JS",
+    tech2: "Node JS",
     status: "Devlopment",
     des: [
       {
@@ -419,51 +426,52 @@ export const projects = [
 export const skills = [
   {
     id: 1,
-    icon: "/swiftIcon.png",
-    name: "Swift",
-    des: "Mastery in Swift for robust and efficient application development.",
+    icon: "/reactNativeIcon.png",
+    name: "React Native",
+    des: "Expertise in building cross-platform mobile applications with React Native, delivering seamless performance and native-like user experiences for iOS and Android.",
   },
   {
     id: 2,
-    icon: "/reactNativeIcon.png",
-    name: "React Native",
-    des: "In-depth learning in progress to broaden cross-platform development capabilities.",
+    icon: RiNextjsFill,
+    name: "React/Next JS",
+    des: "Proficient in creating dynamic, high-performance web applications using React and Next.js, with a focus on server-side rendering and optimized SEO.",
   },
   {
     id: 3,
-    icon: "/xcodeIcon.png",
-    name: "Xcode",
-    des: "Proficiency in utilizing Xcode as the primary development environment.",
+    icon: FaNodeJs,
+    name: "Node/Express JS",
+    des: "Skilled in developing scalable, efficient backend APIs and services with Node.js and Express, ensuring secure and robust server-side solutions.",
   },
+
   {
     id: 4,
-    icon: "/postmanIcon.png",
-    name: "Postman",
-    des: "Skilled in API testing and debugging with Postman.",
+    icon: SiPostgresql,
+    name: "PostgreSQL",
+    des: "Experienced in designing and managing relational databases using PostgreSQL, leveraging its advanced features for scalable and efficient data storage.",
   },
   {
     id: 5,
-    icon: "/jsIcon.png",
-    name: "JavaScript",
-    des: "Mastery in Swift for robust and efficient application development.",
+    icon: "/xcodeIcon.png",
+    name: "Xcode",
+    des: "Experienced in developing, testing, and deploying iOS applications using Xcode, with a strong emphasis on performance and usability.",
   },
   {
     id: 6,
-    icon: "/vscodeIcon.png",
-    name: "VS Code",
-    des: "Mastery in Swift for robust and efficient application development.",
+    icon: "/androidStudioIcon.png",
+    name: "Android Studio",
+    des: "Skilled in using Android Studio to debug and optimize mobile applications, ensuring compatibility and excellent user experiences on Android devices.",
   },
   {
     id: 7,
-    icon: "/androidStudioIcon.png",
-    name: "Android Studio",
-    des: "In-depth learning in progress to broaden cross-platform development capabilities.",
+    icon: RiTailwindCssFill,
+    name: "TailwindCSS",
+    des: "Proficient in crafting responsive and modern user interfaces with Tailwind CSS, ensuring clean and consistent design systems.",
   },
   {
     id: 8,
-    icon: "/jiraIcon.png",
-    name: "Jira",
-    des: "Mastery in Swift for robust and efficient application development.",
+    icon: BiLogoTypescript,
+    name: "Typescript/Javascript",
+    des: "Adept at building reliable and maintainable applications with TypeScript and JavaScript, ensuring type safety and enhanced developer productivity.",
   },
 ];
 
