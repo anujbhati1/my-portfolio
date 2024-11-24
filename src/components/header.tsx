@@ -1,11 +1,12 @@
 "use client";
 import { cn } from "@/lib/cn";
 import { navbarData } from "@/lib/constants";
+import { HeaderProps } from "@/types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 
-function Header() {
+function Header({ onNavigate }: HeaderProps) {
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
   const pathname = usePathname();
 
@@ -37,7 +38,7 @@ function Header() {
             />
           </svg>
 
-          {/* <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
+          {/* <span className='self-center text-base font-semibold whitespace-nowrap text-gray-100'>
             Anuj Bhati
           </span> */}
         </Link>
@@ -45,7 +46,7 @@ function Header() {
           data-collapse-toggle='navbar-default'
           onClick={() => setShowMobileMenu((pre) => !pre)}
           type='button'
-          className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-primary/50 focus:outline-none focus:ring-1 focus:ring-gray-200 '
+          className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden sm:hover:bg-primary/50 focus:outline-none focus:ring-1 focus:ring-primary/50 '
           aria-controls='navbar-default'
           aria-expanded='false'
         >
@@ -75,9 +76,11 @@ function Header() {
           <ul className='flex flex-col p-4 md:p-0 mt-4 border border-primary/10 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 '>
             {navbarData.map((item) => (
               <li key={item.path}>
-                <a
+                <button
                   key={item.path}
-                  href='#'
+                  onClick={() => {
+                    onNavigate(item.type);
+                  }}
                   className={cn(
                     "block py-2 px-3 text-white/50 rounded hover:text-primary/50 md:hover:bg-transparent md:border-0 md:hover:text-primary/50 md:p-0 sm:duration-200",
                     {
@@ -87,7 +90,7 @@ function Header() {
                   )}
                 >
                   {item.name}
-                </a>
+                </button>
               </li>
             ))}
           </ul>

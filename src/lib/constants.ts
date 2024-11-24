@@ -1,3 +1,4 @@
+import { NavbarTypes } from "@/types";
 import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
 import { DiMongodb } from "react-icons/di";
 import {
@@ -15,26 +16,26 @@ import { IoLogoFigma } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiExpress, SiGradle, SiNextdotjs } from "react-icons/si";
 
-export const navbarData = [
+export const navbarData: NavbarTypes[] = [
   {
     name: "Home",
     path: "/",
+    type: "home",
+  },
+  {
+    name: "Projects",
+    path: "/projects",
+    type: "projects",
   },
   {
     name: "Skills",
     path: "/skills",
-  },
-  {
-    name: "Experience",
-    path: "/experience",
+    type: "skills",
   },
   {
     name: "Contact",
     path: "/contact",
-  },
-  {
-    name: "Learning",
-    path: "/learning",
+    type: "contact",
   },
 ];
 

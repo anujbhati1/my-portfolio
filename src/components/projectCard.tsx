@@ -7,7 +7,6 @@ function ProjectCard({
   id,
   title,
   image,
-  url,
   tech,
   status,
   type,

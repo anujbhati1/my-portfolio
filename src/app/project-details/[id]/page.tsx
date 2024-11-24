@@ -14,7 +14,7 @@ function ProjectDetails({ params }: { params: { id: string } }) {
   return (
     <>
       <div className='bg-black container mx-auto min-h-svh'>
-        <Header />
+        <Header onNavigate={() => {}} />
         <div className='h-full max-sm:p-3 max-lg:p-3 text-gray-200'>
           <div className='sm:py-10'>
             <div>
@@ -38,7 +38,9 @@ function ProjectDetails({ params }: { params: { id: string } }) {
               </div>
               <div className='space-y-5'>
                 {pData.des.map((item) => (
-                  <p className='max-sm:text-sm'>{item.para}</p>
+                  <p key={item.id} className='max-sm:text-sm'>
+                    {item.para}
+                  </p>
                 ))}
               </div>
               {pData.type === "mobile" ? (

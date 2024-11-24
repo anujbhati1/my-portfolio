@@ -29,10 +29,10 @@ function Hero() {
           <div>
             <p className='text-white mb-2'>Education</p>
             <p className='mb-8 leading-relaxed'>
-              I completed my undergraduate degree and later pursued a Master's
-              in Computer Applications. Along the way, I discovered my passion
-              for coding and have been dedicated to enhancing my skills in the
-              field ever since.
+              I completed my undergraduate degree and later pursued a
+              Master&apos;s in Computer Applications. Along the way, I
+              discovered my passion for coding and have been dedicated to
+              enhancing my skills in the field ever since.
             </p>
           </div>
         </div>

@@ -1,3 +1,4 @@
+"use client";
 import BackToTop from "@/components/backToTop";
 import ContactMe from "@/components/contactMe";
 import Footer from "@/components/footer";
@@ -6,37 +7,60 @@ import Hero from "@/components/hero";
 import ProjectCard from "@/components/projectCard";
 import SkillCard from "@/components/skillCard";
 import { extraSkills, projects, skills } from "@/lib/constants";
+import { SectionRefs } from "@/types";
+import { useRef } from "react";
 
 export default function Home() {
+  const sectionRefs = useRef<SectionRefs>({
+    home: null,
+    skills: null,
+    projects: null,
+    contact: null,
+  });
+
+  const scrollToSection = (section: keyof SectionRefs) => {
+    sectionRefs.current[section]?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  const setRef =
+    (section: keyof SectionRefs) => (el: HTMLDivElement | null) => {
+      sectionRefs.current[section] = el;
+    };
+
   return (
     <>
-      <div className='bg-black container mx-auto'>
-        <Header />
+      <div className='bg-black container mx-auto' ref={setRef("home")}>
+        <Header onNavigate={scrollToSection} />
         <Hero />
         <div>
-          <div className='mb-8 mx-4'>
-            <div className='text-[#7b4ae2] w-fit bg-[#7b4ae2]/10 text-sm font-bold px-2 py-1 rounded-lg mx-1'>
-              🔗 Portfolio
+          <div ref={setRef("projects")}>
+            <div className='mb-8 mx-4'>
+              <div className='text-[#7b4ae2] w-fit bg-[#7b4ae2]/10 text-sm font-bold px-2 py-1 rounded-lg mx-1'>
+                🔗 Portfolio
+              </div>
+              <h1 className='text-2xl md:text-4xl font-bold text-white mt-3'>
+                Works and projects
+              </h1>
             </div>
-            <h1 className='text-2xl md:text-4xl font-bold text-white mt-3'>
-              Works and projects
-            </h1>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between mx-3'>
+              {projects.map((item) => (
+                <ProjectCard
+                  key={item.id}
+                  id={item.id}
+                  url={item.url}
+                  status={item.status}
+                  tech={item.tech}
+                  title={item.title}
+                  image={item.image}
+                  type={item.type}
+                />
+              ))}
+            </div>
           </div>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between mx-3'>
-            {projects.map((item) => (
-              <ProjectCard
-                key={item.id}
-                id={item.id}
-                url={item.url}
-                status={item.status}
-                tech={item.tech}
-                title={item.title}
-                image={item.image}
-                type={item.type}
-              />
-            ))}
-          </div>
-          <div className='my-10 w-full'>
+          <div ref={setRef("skills")} className='my-10 w-full'>
             <div className='flex justify-center items-center mb-12'>
               <div className='mx-4'>
                 <div className='flex justify-center'>
@@ -81,7 +105,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className='mb-20 mt-10'>
+          <div ref={setRef("contact")} className='mb-20 mt-10'>
             <div className='flex justify-center items-center mb-12'>
               <div className='mx-4'>
                 <div className='flex justify-center'>
