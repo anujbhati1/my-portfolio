@@ -10,8 +10,7 @@ function Hero() {
           <img
             className='object-cover object-center rounded-full'
             alt='hero'
-            src='/profile.jpeg'
-            // src="https://dummyimage.com/300x300"
+            src='/mainImg.jpeg'
           />
         </div>
         <div className='lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center'>
