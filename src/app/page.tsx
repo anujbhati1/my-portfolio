@@ -8,7 +8,9 @@ import ProjectCard from "@/components/projectCard";
 import SkillCard from "@/components/skillCard";
 import { extraSkills, projects, skills } from "@/lib/constants";
 import { SectionRefs } from "@/types";
-import { useRef } from "react";
+import { getCalApi } from "@calcom/embed-react";
+import { useEffect, useRef } from "react";
+import { CiCalendar } from "react-icons/ci";
 
 export default function Home() {
   const sectionRefs = useRef<SectionRefs>({
@@ -29,6 +31,41 @@ export default function Home() {
     (section: keyof SectionRefs) => (el: HTMLDivElement | null) => {
       sectionRefs.current[section] = el;
     };
+
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "30min" });
+      cal("ui", {
+        theme: "dark",
+        styles: { branding: { brandColor: "#000000" } },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+  }, []);
+
+  /*
+    Below code is for Floating Book my Cal button 
+    Use it if you need the floating button but make sure to 
+    remove the two same functions.  
+  */
+
+  // useEffect(() => {
+  //   (async function () {
+  //     const cal = await getCalApi({ namespace: "30min" });
+  //     cal("floatingButton", {
+  //       calLink: "anujbhati/30min",
+  //       config: { layout: "month_view", theme: "dark" },
+  //       buttonColor: "#7b4ae2",
+  //     });
+  //     cal("ui", {
+  //       theme: "dark",
+  //       styles: { branding: { brandColor: "#000000" } },
+  //       hideEventTypeDetails: false,
+  //       layout: "month_view",
+  //     });
+  //   })();
+  // }, []);
 
   return (
     <>
@@ -120,6 +157,17 @@ export default function Home() {
               </div>
             </div>
             <ContactMe />
+          </div>
+          <div className='w-full'>
+            <button
+              data-cal-namespace='30min'
+              data-cal-link='anujbhati/30min'
+              data-cal-config='{"layout":"month_view"}'
+              className='mx-auto bg-primary hover:brightness-90 duration-300 flex justify-center items-center gap-2 text-white px-4 py-3 rounded-full font-semibold'
+            >
+              <CiCalendar size={23} color='#ffffff' />
+              <span className=''>Book my Cal</span>
+            </button>
           </div>
           <BackToTop />
         </div>

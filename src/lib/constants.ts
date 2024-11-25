@@ -1,4 +1,4 @@
-import { NavbarTypes } from "@/types";
+import { NavbarTypes, ProjectType } from "@/types";
 import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
 import { DiMongodb } from "react-icons/di";
 import {
@@ -40,28 +40,32 @@ export const navbarData: NavbarTypes[] = [
   },
 ];
 
-export const projects = [
+export const projects: ProjectType[] = [
   {
     id: 1,
     title: "Digilegal Pro : Legal Research App (Mobile)",
     image: "/digimain.jpg",
-    url: "https://play.google.com/store/apps/details?id=com.digilegalpro&hl=en",
+    url: "",
     type: "mobile",
     tech: "React Native",
     tech2: "",
     status: "Online",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.digilegalpro&hl=en",
+    iosUrl:
+      "https://apps.apple.com/in/app/digilegal-pro/id1659192741?platform=iphone",
+    techUsed: [
+      "React Native",
+      "Redux",
+      "OneSignal",
+      "Rest API",
+      "Java",
+      "SpringBoot",
+    ],
     des: [
       {
         id: 1,
-        para: "· Developed Digilegal Pro, a legal app using React Native, Redux, Java Springboot, and Rest APIs. Enhanced legal case research with features such as various filters, case downloads, PDF downloads, and notifications. Users can translate cases into multiple languages, bookmark cases, view search history, and filter cases by date.",
-      },
-      {
-        id: 2,
-        para: "· Published Digilegal Pro on the Google Play Store and Apple App Store, offering users a powerful tool for efficient legal research and management.",
-      },
-      {
-        id: 3,
-        para: "· Work with the team of 4",
+        para: "A comprehensive React Native application designed to simplify legal research for lawyers and professionals. This feature-rich app enables users to search cases effortlessly using free text, act, court, citation, or judge name. It provides detailed case results, including headnotes and full case readings with customizable font sizes. Users can bookmark cases, download and print documents, and even focus on specific paragraphs for precise insights. Built with Redux for state management, the app ensures a seamless and efficient user experience, making legal research more accessible and convenient.",
       },
     ],
     images: [
@@ -103,23 +107,24 @@ export const projects = [
     id: 2,
     title: "Legitquest Research - Legal case management app (Mobile)",
     image: "/lgmain.jpg",
-    url: "https://play.google.com/store/apps/details?id=com.legitquest&hl=en",
+    url: "",
     type: "mobile",
     tech: "React Native",
     tech2: "",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.legitquest&hl=en",
     status: "Online",
+    techUsed: [
+      "React Native",
+      "Redux",
+      "Rest API",
+      "Elasticsearch",
+      "PHP/Laravel",
+    ],
     des: [
       {
         id: 1,
-        para: "· Developed a comprehensive legal app and management tool using React Native and Redux for the frontend, and PHP Laravel with Elasticsearch for the backend. Streamlined case management for lawyers and users, offering features such as case management, research capabilities, webview integration with two websites, and customizable options for personalized user experiences.",
-      },
-      {
-        id: 2,
-        para: "· Managed cases, matters, documents, reports, alerts, and case notifications within the app. Implemented customizable features like personalized bottom tab navigation.",
-      },
-      {
-        id: 3,
-        para: "· Work with the team of 6 also lead the fronted of the mobile app.",
+        para: "Developed a comprehensive legal app and management tool using React Native and Redux for the frontend, and PHP Laravel with Elasticsearch for the backend. Streamlined case management for lawyers and users, offering features such as case management, research capabilities, webview integration with two websites, and customizable options for personalized user experiences.",
       },
     ],
     images: [
@@ -186,22 +191,11 @@ export const projects = [
     tech: "Next JS",
     tech2: "",
     status: "Online",
+    techUsed: ["NextJS", "Prisma", "Postgresql", "Typescript", "TailwindCSS"],
     des: [
       {
         id: 1,
-        para: "",
-      },
-      {
-        id: 2,
-        para: "",
-      },
-      {
-        id: 3,
-        para: "",
-      },
-      {
-        id: 4,
-        para: "",
+        para: "Digilegalbooks.com built with Next.js, designed specifically for selling legal books. The platform offers a seamless shopping experience with features like adding items to the cart, secure checkout, integrated Razorpay payment gateway, and real-time inventory updates. Users can manage their order history, track delivery statuses, and enjoy a responsive, user-friendly interface. This project highlights expertise in building scalable, high-performance web applications with advanced e-commerce functionality.",
       },
     ],
     images: [
@@ -248,22 +242,18 @@ export const projects = [
     tech: "Next JS",
     tech2: "",
     status: "Online",
+    techUsed: [
+      "NextJS",
+      "Prisma",
+      "Postgresql",
+      "Typescript",
+      "TailwindCSS",
+      "FlipHTML5",
+    ],
     des: [
       {
         id: 1,
-        para: "",
-      },
-      {
-        id: 2,
-        para: "",
-      },
-      {
-        id: 3,
-        para: "",
-      },
-      {
-        id: 4,
-        para: "",
+        para: "A web application built with Next.js that allows users to browse and read a variety of legal books. The platform includes features like saving books to favorites for quick access and an eBook reader with customizable settings. With a clean and responsive design, it provides a smooth and user-friendly reading experience across all devices.",
       },
     ],
     images: [
@@ -310,18 +300,11 @@ export const projects = [
     tech: "Next JS",
     tech2: "",
     status: "Online",
+    techUsed: ["NextJS", "TailwindCSS"],
     des: [
       {
         id: 1,
-        para: "· Punjab Rheumatology & Immunology Centre (PRIC) – the first dedicated Rheumatology & Immunology service of Punjab and the biggest Rheumatology Daycare Centre of India.",
-      },
-      {
-        id: 2,
-        para: "· This website allows user to book online appointment, check prescription, donwload report and much more.",
-      },
-      {
-        id: 3,
-        para: "· This website built using Next JS 14 for the better SEO.",
+        para: "Praic.in built with Next.js 14 to optimize SEO and enhance accessibility. Designed for India’s largest Rheumatology Daycare Centre, the platform allows users to book appointments online, check prescriptions, download reports, and access a range of healthcare services conveniently. This project demonstrates expertise in building responsive, efficient, and feature-rich web applications tailored for healthcare needs.",
       },
     ],
     images: [
@@ -368,22 +351,20 @@ export const projects = [
     tech: "Next JS",
     tech2: "Node JS",
     status: "Devlopment",
+    techUsed: [
+      "NextJS",
+      "Prisma",
+      "Postgresql",
+      "Typescript",
+      "TailwindCSS",
+      "NodeJS",
+      "Express",
+      "Turborepo",
+    ],
     des: [
       {
         id: 1,
-        para: "",
-      },
-      {
-        id: 2,
-        para: "",
-      },
-      {
-        id: 3,
-        para: "",
-      },
-      {
-        id: 4,
-        para: "",
+        para: "A comprehensive platform for house planning and architectural services, built using TurboRepo, Next.js, and Node.js for optimized performance and scalability. The website offers contractors the ability to purchase ready-made plans for use in their projects, while users can create custom plans that are further developed by the platform's team. It includes features like real-time chat for project discussions, notifications for updates and alerts, and a seamless user experience for browsing interior designs, elevations, and plan-books. This project highlights expertise in creating feature-rich, scalable solutions tailored for the architecture and construction industry.",
       },
     ],
     images: [

@@ -1,5 +1,6 @@
 import React from "react";
 import TitleInfo from "./titleinfo";
+import { CiCalendar } from "react-icons/ci";
 
 function Hero() {
   return (
@@ -34,6 +35,17 @@ function Hero() {
               discovered my passion for coding and have been dedicated to
               enhancing my skills in the field ever since.
             </p>
+          </div>
+          <div>
+            <button
+              data-cal-namespace='30min'
+              data-cal-link='anujbhati/30min'
+              data-cal-config='{"layout":"month_view"}'
+              className='bg-primary hover:brightness-90 duration-300 flex justify-center items-center gap-2 text-white px-4 py-3 rounded-full font-semibold'
+            >
+              <CiCalendar size={23} color='#ffffff' />
+              <span className=''>Book my Cal</span>
+            </button>
           </div>
         </div>
       </div>

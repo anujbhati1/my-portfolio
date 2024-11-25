@@ -84,8 +84,7 @@ function Header({ onNavigate }: HeaderProps) {
                   className={cn(
                     "block py-2 px-3 text-white/50 rounded hover:text-primary/50 md:hover:bg-transparent md:border-0 md:hover:text-primary/50 md:p-0 sm:duration-200",
                     {
-                      "text-white bg-primary/50 hover:text-white md:text-primary/50 md:bg-transparent":
-                        item.path === pathname,
+                      "text-primary/70": item.path === pathname,
                     }
                   )}
                 >
