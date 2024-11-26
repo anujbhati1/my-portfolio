@@ -1,6 +1,7 @@
 import React from "react";
 import TitleInfo from "./titleinfo";
 import { CiCalendar } from "react-icons/ci";
+import Link from "next/link";
 
 function Hero() {
   return (
@@ -14,7 +15,7 @@ function Hero() {
           />
         </div>
         <div className='lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center'>
-          <TitleInfo name='About Me' icon='🧐' />
+          <TitleInfo name='About Me' icon='😊' />
           <h1 className='title-font sm:text-4xl text-3xl mt-2 mb-4 font-medium text-white'>
             I&apos;m Anuj Bhati, a <br className='hidden lg:inline-block' />
             Full-Stack Developer
@@ -35,7 +36,7 @@ function Hero() {
               enhancing my skills in the field ever since.
             </p>
           </div>
-          <div>
+          <div className='flex flex-col lg:flex-row items-center gap-3'>
             <button
               data-cal-namespace='30min'
               data-cal-link='anujbhati/30min'
@@ -45,6 +46,17 @@ function Hero() {
               <CiCalendar size={23} color='#ffffff' />
               <span className=''>Book my Cal</span>
             </button>
+            <Link
+              target='_blank'
+              href={
+                "https://drive.google.com/file/d/1ybJ9vqhZFKn0Kz1GuH2m_mni3H6L2qY-/view?usp=sharing"
+              }
+            >
+              <button className='group relative inline-block hover:animate-pulse px-2 duration-300 justify-center items-center gap-2 text-primary  py-3 rounded-full font-semibold'>
+                <span className=''>Hiring? Check out my CV.</span>
+                <span className='absolute bottom-0 left-1/2 w-0 h-0.5 bg-current group-hover:w-full group-hover:left-0 transition-all duration-300 ease-out origin-center' />
+              </button>
+            </Link>
           </div>
         </div>
       </div>
